@@ -1,0 +1,340 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+    text-align: center;
+    background: linear-gradient(rgba(27, 27, 27, 0.85), rgba(27, 27, 27, 0.85)),
+    url('../museum/pictures/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  .team-page {
+    padding: 60px 20px; /* Increased padding for more space around the content */
+    max-width: 1200px;
+    margin: 0 ;
+  }
+  
+  .team-page h1 {
+    font-size: 3.5rem;
+    color: #d4af37; /* Gold color */
+    margin-bottom: 10px; /* Increased space below the title */
+    text-shadow: 0 0 18px rgba(212, 175, 55, 0.8);
+  }
+  
+  .team-page .team-description {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #e5e5e5;
+    margin-bottom: 50px; /* Added more space below the description */
+  }
+  
+  /* Center and Space Out Team Members */
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 50px; /* Increased gap between cards */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+  }
+  
+  .team-member {
+    perspective: 1000px; /* Enables 3D effect */
+    display: flex;
+    justify-content: center; /* Center the card horizontally */
+    align-items: center; /* Center the card vertically */
+  }
+  
+  /* Card Styles */
+  .card {
+    position: relative;
+    width: 250px; /* Slightly larger card for better spacing */
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s; /* Transition for flipping */
+    box-shadow: 0 0 22px rgba(255, 215, 0, 0.5); /* Subtle initial glow */
+    border-radius: 10px;
+  }
+  
+  /* Animation for the glow effect */
+  @keyframes glowAnimation {
+    0% {
+      box-shadow: 0 4 22px rgba(255, 215, 0, 0.5); /* Subtle glow */
+    }
+    50% {
+      box-shadow: 0 4 30px rgba(255, 215, 0, 0.8); /* Stronger glow */
+    }
+    100% {
+      box-shadow: 0 4 40px rgba(255, 215, 0, 1); /* Full glow */
+    }
+  }
+  
+  /* Hover effect for the card: flip + glow animation */
+  .card:hover {
+    transform: rotateY(180deg); /* Flip the card */
+    animation: glowAnimation 0.8s ease-in-out; /* Apply the glow animation */
+  }
+  
+  .card .front,
+  .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(37, 37, 37, 0.8);
+  }
+  
+  /* Front (Image Side) */
+  .card .front {
+    background-color: #1b1b1b;
+  }
+  
+  .card .front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Back (Description Side) */
+  .card .back {
+    background-color: #292929;
+    color: #e5e5e5;
+    text-align: center;
+    padding: 20px;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6;
+    border-radius: 10px;
+  }
+
+  /* Add to existing .back styles */
+.back {
+  padding: 2; /* Remove padding to fill entire card */
+  overflow: hidden;
+}
+
+.linked-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.linked-image:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: Add text overlay if needed */
+.back::after {
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: #d4af37;
+  font-size: 1rem;
+}
+  
+  /* Adjust for Smaller Screens */
+  @media (max-width: 1024px) {
+    .team-members {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+      gap: 40px; /* Maintain spacious layout */
+    }
+  
+    .card {
+      width: 220px;
+      height: 280px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .team-members {
+      grid-template-columns: 1fr; /* 1 card per row */
+      gap: 30px; /* Reduced gap for smaller screens */
+    }
+  
+    .card {
+      width: 200px;
+      height: 260px;
+    }
+  }
+  
+  /* General Styles */
+
+
+.museum-hall {
+  padding: 60px 20px; /* Increased padding for more space around the content */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.museum-hall h1 {
+  font-size: 3.5rem;
+  color: #d4af37; /* Gold color */
+  margin-bottom: 30px; /* Increased space below the title */
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+}
+
+.museum-hall .room-description {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #e5e5e5;
+  margin-bottom: 60px; /* Added more space below the description */
+}
+
+/* Center and Space Out Museum Rooms */
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 rooms per row */
+  gap: 50px; /* Increased gap between rooms */
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+}
+
+.room img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.room:hover img {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 1); /* Glow effect on hover */
+}
+
+.room p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* The Return Door */
+.return-door {
+  position: absolute;
+  bottom: 20px; /* Place it at the bottom of the page */
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.return-door:hover {
+  transform: scale(1.1); /* Make it slightly bigger on hover */
+  box-shadow: 0 0 30px rgba(255, 215, 0, 1); /* Glow effect on hover */
+}
+
+.return-door .door-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.return-door .door-wrapper img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.return-door .door-wrapper:hover img {
+  transform: scale(1.2); /* Slightly increase the size of the image on hover */
+}
+
+.return-door p {
+  font-size: 1.2rem;
+  color: #d4af37; /* Gold color */
+  margin-top: 10px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+/* Adjust for Smaller Screens */
+@media (max-width: 1024px) {
+  .rooms {
+    grid-template-columns: repeat(2, 1fr); /* 2 rooms per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms {
+    grid-template-columns: 1fr; /* 1 room per row */
+  }
+
+  .return-door {
+    bottom: 10px; /* Reduce space for mobile screens */
+  }
+}
+
+/* Team Member Styling (same as before) */
+
+/* Corner Door Icon Button Styling */
+/* From Uiverse.io by alexmaracinaru */ 
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: rgb(124, 111, 35);
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: rgba(255, 215, 0, 1);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #f7e57f;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  
+  
