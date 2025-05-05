@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Musée des Nexus Des Voies Perdues</title>
+  <link rel="stylesheet" href="./Article d’Analyse.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=MedievalSharp&family=Lora&display=swap">
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav class="blog-nav">
+    <div class="nav-logo">Musée des Piliers Éternels</div>
+    <ul class="nav-links">
+      <li>
+        <a href="../museum first page.html">
+          <img src="./pictures/return-to-hall.jpg" alt="Retour au Hall" class="nav-image">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- En-tête du Blog -->
+  <header class="blog-header">
+    <h1>Article d'Analayse</h1>
+    <p>Une réponse à la crise de l’humanité ? Ou le dernier espoir avant l’apocalypse ? </p>
+  </header>
+
+  <!-- Section des Articles Récents -->
+  <section id="recent-posts" class="recent-posts">
+    <h2>Articles Récents</h2>
+    <div class="post-grid">
+      <!-- Article 1: Un voyage à travers les fondations de l’âme humaine -->
+<div class="post-card">
+  <img src="./pictures/analyse.jpg" alt="Apparition du Musée">
+  <h3>Un voyage à travers les fondations de l’âme humaine</h3>
+  <p class="short-text"> Dès l’entrée, le visiteur est confronté à une énigme :</p>
+  <p class="full-text" style="display: none;">
+    Dès l’entrée, le visiteur est confronté à une énigme : un portail ne s’ouvre qu’à celui qui 
+    trouve la clé du savoir. Ce premier défi illustre l’idée que la connaissance et la réflexion 
+    sont les premières étapes vers une compréhension plus profonde du monde. Une fois à l’intérieur, 
+    chaque salle du musée est dédiée à un des six piliers, incarné par des figures légendaires venues 
+    de différentes époques et civilisations.Parmi eux, le roi Arthur, paragon du courage, guide les 
+    visiteurs à travers un univers où bravoure et responsabilité se confondent. Plus loin, l’ombre 
+    de penseurs visionnaires illumine la salle de l’intelligence, où les grandes idées de l’histoire 
+    continuent de résonner à travers les âges.
+  </p>
+  <a href="#" class="read-more" onclick="toggleReadMore(this)">Lire la suite</a>
+</div>
+
+<!-- Article 2: Un reflet de nos errances -->
+<div class="post-card">
+  <img src="./pictures/2.jpg" alt="Architecture du Musée">
+  <h3>Un reflet de nos errances</h3>
+  <p class="short-text">Dans une société marquée par l’incertitude et le doute,</p>
+  <p class="full-text" style="display: none;">
+    Dans une société marquée par l’incertitude et le doute, Le Musée des Piliers Éternels interroge : 
+    avons-nous oublié ces valeurs essentielles ? Les guerres, les crises écologiques et les fractures 
+    sociales témoignent d’un monde en quête d’un nouvel équilibre. Ce musée ne propose pas de solutions 
+    directes, mais il pousse chacun à une réflexion profonde. Sommes-nous prêts à écouter les leçons du 
+    passé pour reconstruire l’avenir ?
+  </p>
+  <a href="#" class="read-more" onclick="toggleReadMore(this)">Lire la suite</a>
+</div>
+
+<!-- Article 3: Vers l’Apocalypse ou la Renaissance ? -->
+<div class="post-card">
+  <img src="./pictures/appcalyps.jpg" alt="Choc des Peuples">
+  <h3>Vers l’Apocalypse ou la Renaissance ?</h3>
+  <p class="short-text">Le monde est à l’aube d’une catastrophe.</p>
+  <p class="full-text" style="display: none;">Le monde est à l’aube d’une catastrophe. 
+    Guerres, crises environnementales, perte de repères… L’humanité s’effondre sous le 
+    poids de ses propres excès. L’ombre d’une apocalypse plane, non pas par une volonté 
+    divine, mais par la destruction que nous avons nous-mêmes semée.
+
+    C’est dans ce chaos que Le Musée des Piliers Éternels apparaît comme un dernier avertissement. Chaque salle raconte une vérité oubliée : le courage perdu face à la peur, l’intelligence dévoyée par la cupidité, l’espoir étouffé par le désespoir. Pourtant, tout n’est pas joué. Ce musée n’est pas qu’un témoin du passé, il est une clé vers un avenir encore possible.
+    
+    Sommes-nous condamnés à l’oubli ou prêts à saisir cette dernière chance ? L’apocalypse approche, mais ce musée pourrait bien en être l’ultime rempart.</p>
+  <a href="#" class="read-more" onclick="toggleReadMore(this)">Lire la suite</a>
+</div>
+    </div>
+  </section>
+
+  <!-- Section des Commentaires -->
+  <section id="comments" class="comments-section">
+    <h2>Commentaires</h2>
+    <div class="comment-form">
+      <textarea id="comment-input" placeholder="Ajoutez un commentaire..."></textarea>
+      <button id="submit-comment">Envoyer</button>
+    </div>
+    <div class="comment-list" id="comment-list">
+      <!-- Les commentaires seront ajoutés ici dynamiquement -->
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="blog-footer">
+    <p>&copy; Nexus Des Voies Perdues</p>
+  </footer>
+
+  <script src="./Article d’Analyse.js"></script>
+</body>
+</html>

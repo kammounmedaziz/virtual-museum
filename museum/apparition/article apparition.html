@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Musée des Piliers Éternels</title>
+  <link rel="stylesheet" href="article apparition.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=MedievalSharp&family=Lora&display=swap">
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav class="blog-nav">
+    <div class="nav-logo">Musée des Piliers Éternels</div>
+    <ul class="nav-links">
+      <li>
+        <a href="../museum first page.html">
+          <img src="./pictures/return-to-hall.png" alt="Retour au Hall" class="nav-image">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- En-tête du Blog -->
+  <header class="blog-header">
+    <h1>Article d'Apparition</h1>
+    <p>Découvrez l'histoire deriére l'apparition du musée dans notre monde</p>
+  </header>
+
+  <!-- Section des Articles Récents -->
+  <section id="recent-posts" class="recent-posts">
+    <h2>Articles Récents</h2>
+    <div class="post-grid">
+      <!-- Article 1: L'Apparition du Musée -->
+<div class="post-card">
+  <img src="./pictures/apparition.png" alt="Apparition du Musée">
+  <h3>L'Apparition du Musée</h3>
+  <p class="short-text"> L'Origine d'un Monde Nouveau</p>
+  <p class="full-text" style="display: none;">
+    Le Musée Virtuel n'est pas apparu comme un simple projet, 
+    mais comme une vision, une réponse à un besoin profond d'exploration et de conservation du savoir 
+    dans un espace dématérialisé. Son apparition fut marquée par une énigme, une porte scellée que seuls 
+    les esprits curieux pouvaient ouvrir. Cette approche ludique et mystérieuse a marqué l’histoire de sa 
+    création et a suscité une fascination immédiate chez les explorateurs du numérique.
+  </p>
+  <a href="#" class="read-more" onclick="toggleReadMore(this)">Lire la suite</a>
+</div>
+
+<!-- Article 2: L'Architecture du Musée -->
+<div class="post-card">
+  <img src="./pictures/architeture.jpg" alt="Architecture du Musée">
+  <h3>L'Architecture du Musée</h3>
+  <p class="short-text">Une Architecture Sans Précédent</p>
+  <p class="full-text" style="display: none;">
+    L'architecture du musée s'inspire d'un monde où l'impossible devient réalisable. 
+    Chaque salle est une expérience immersive : des toits flottants aux galeries interactives, 
+    chaque élément a été pensé pour défier les lois physiques tout en offrant une harmonie 
+    visuelle saisissante. L'espace des Toits, par exemple, présente une bibliothèque de 
+    structures suspendues, permettant aux visiteurs de voyager à travers différentes époques 
+    et styles architecturaux en un simple clic.
+  </p>
+  <a href="#" class="read-more" onclick="toggleReadMore(this)">Lire la suite</a>
+</div>
+
+<!-- Article 3: Le Choc des Peuples -->
+<div class="post-card">
+  <img src="./pictures/choc.jpg" alt="Choc des Peuples">
+  <h3>Le Choc des Peuples</h3>
+  <p class="short-text">Le Choc des Peuples et la Réinterprétation de l'Histoire</p>
+  <p class="full-text" style="display: none;">L'apparition du musée a suscité des réactions diverses. 
+    Certains y ont vu une révolution culturelle, un moyen de transcender les frontières et de redéfinir 
+    l'accès à l'histoire et à l'art. D'autres ont perçu cette dématérialisation comme une rupture avec 
+    l'authenticité du passé, une transformation trop radicale de notre rapport au patrimoine.
+    Cependant, loin d'effacer l'héritage des civilisations, ce musée virtuel leur offre une nouvelle vie. 
+    Il devient un espace de rencontre entre le passé et le futur, entre les peuples et les époques, ouvrant 
+    des dialogues inédits et des perspectives insoupçonnées.</p>
+  <a href="#" class="read-more" onclick="toggleReadMore(this)">Lire la suite</a>
+</div>
+    </div>
+  </section>
+
+  <!-- Section des Commentaires -->
+  <section id="comments" class="comments-section">
+    <h2>Commentaires</h2>
+    <div class="comment-form">
+      <textarea id="comment-input" placeholder="Ajoutez un commentaire..."></textarea>
+      <button id="submit-comment">Envoyer</button>
+    </div>
+    <div class="comment-list" id="comment-list">
+      <!-- Les commentaires seront ajoutés ici dynamiquement -->
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="blog-footer">
+    <p>&copy; Nexus Des Voies Perdues</p>
+  </footer>
+
+  <script src="article apparition.js"></script>
+</body>
+</html>
