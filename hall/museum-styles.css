@@ -1,0 +1,301 @@
+/* General body styling */
+body {
+  background: rgb(20, 15, 15);
+  color: rgb(20, 15, 15);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./pictures/background.png') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.4; /* Adjust the opacity */
+  z-index: -1;
+  animation: fadeBackground 5s infinite alternate ease-in-out; /* Fading effect */
+}
+
+@keyframes fadeBackground {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.4; }
+}
+
+
+
+
+/* Museum Hall Container */
+.museum-hall {
+  position: relative;
+  padding-top: px; /* Add padding to account for the fixed nav */
+  background: url('./pictures/fantasy-background.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+/* Rooms in the Hall */
+.rooms {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.room {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: rgba(30, 30, 30, 0.9);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.room:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 223, 0, 0.8);
+}
+
+.room img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: brightness(75%);
+  border-radius: 15px;
+}
+
+.room:hover img {
+  transform: scale(1.2);
+  filter: brightness(100%);
+}
+
+.room p {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.room:hover p {
+  bottom: -50px;
+  opacity: 0;
+}
+
+/* Timeline Section */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto 0;
+  padding: 20px 0;
+  max-width: 800px;
+  position: relative;
+  z-index: 20; /* Ensure it's above other elements */
+  border-top: 2px solid rgba(212, 175, 55, 0.5); /* Gold border line */
+}
+
+.timeline-event {
+  text-align: center;
+  position: relative;
+  width: 33.33%; /* Divide timeline into three equal parts */
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #d4af37; /* Gold */
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: -10px;
+  box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* Glow around dot */
+}
+
+.timeline-content {
+  margin-top: 15px;
+  color: #f5f5f5;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  font-style: italic;
+  color: #e5e5e5;
+}
+
+.timeline-event:hover .timeline-dot {
+  transform: scale(1.3); /* Enlarge dot on hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-event:hover .timeline-content h3 {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 223, 0, 1);
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-event {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .timeline-dot {
+    top: 0;
+  }
+}
+
+/* Fantasy Footer */
+.fantasy-footer {
+  position: fixed;
+  bottom: -100px; /* Hide the footer by default */
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #1a1a1a, #2c2c2c);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  text-align: center;
+  z-index: 1000;
+  transition: bottom 0.5s ease; /* Smooth transition for showing/hiding */
+}
+
+.fantasy-footer.visible {
+  bottom: 0; /* Show the footer */
+}
+
+.fantasy-footer p {
+  margin: 5px 0;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+/* Spark Effect */
+button:hover {
+  background: gold;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+}
+
+/* Star-like sparks */
+.spark {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: gold;
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkle 0.8s linear;
+}
+
+/* Keyframes for spark animation */
+@keyframes sparkle {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* Stars Container */
+#stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background-color: rgba(255, 215, 0, 0.7);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 1s infinite alternate, moveStar 10s infinite linear;
+}
+
+@keyframes twinkle {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes moveStar {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(calc(100vw * 1.5)) translateY(calc(100vh * 1.5)); }
+}
+
+/* Custom Cursor */
+html, body {
+  cursor: none; /* Hide default cursor */
+}
+
+/* Wand glow effect */
+.wand-glow {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 0, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 1), 0 0 20px rgba(255, 215, 0, 0.8);
+  pointer-events: none;
+  animation: glowAnimation 0.4s linear infinite alternate;
+}
+
+/* Light trail effect */
+.spark {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: gold;
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+  box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.8);
+  animation: sparkleFade 0.5s linear forwards;
+}
+
+/* Glow animation */
+@keyframes glowAnimation {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0.8; }
+}
+
+/* Spark fade-out */
+@keyframes sparkleFade {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2); }
+}
